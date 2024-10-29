@@ -1,0 +1,10 @@
+{
+  "extends": "@kosky/typescript-config/react-config.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  }
+}
