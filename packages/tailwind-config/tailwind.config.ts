@@ -74,6 +74,7 @@ const config: Omit<Config, 'content'> = {
     },
   },
   plugins: [forms, typography],
+  darkMode: 'class',
 };
 
 export default config;

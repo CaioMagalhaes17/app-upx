@@ -27,7 +27,7 @@ body {
   }
 
   .main-content {
-    @apply bg-[#060818]
+    @apply bg-white dark:bg-[#060818]
   }
 
   input.form-input-custom,
@@ -109,7 +109,7 @@ body {
   }
 
   .page-container {
-    left: 245px;
+    left: 0px;
     right: 0px;
     bottom: 0;
     top: 72px;
@@ -123,5 +123,5 @@ body {
     overflow-y: auto !important;
   }
 
-  
+
 }

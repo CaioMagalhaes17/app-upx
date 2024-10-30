@@ -84,12 +84,21 @@ __export(src_exports, {
   IconDollarSignCircle: () => IconDollarSignCircle,
   IconHelpCircle: () => IconHelpCircle,
   IconLogout: () => IconLogout,
+  IconMapPin: () => IconMapPin,
   IconMinus: () => IconMinus,
   IconPlus: () => IconPlus,
   IconShoppingCart: () => IconShoppingCart,
   IconUser: () => IconUser,
   Input: () => Input,
   Logo: () => Logo,
+  NavigationMenu: () => NavigationMenu,
+  NavigationMenuContent: () => NavigationMenuContent,
+  NavigationMenuIndicator: () => NavigationMenuIndicator,
+  NavigationMenuItem: () => NavigationMenuItem,
+  NavigationMenuLink: () => NavigationMenuLink,
+  NavigationMenuList: () => NavigationMenuList,
+  NavigationMenuTrigger: () => NavigationMenuTrigger,
+  NavigationMenuViewport: () => NavigationMenuViewport,
   Panel: () => Panel,
   Sidebar: () => Sidebar,
   Text: () => Text
@@ -597,11 +606,28 @@ var IconMinus = ({ className, fill = false, duotone = true }) => {
   return /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("svg", { width: "16", height: "20", viewBox: "0 0 24 24", stroke: "currentColor", strokeWidth: "1.5", fill: "none", strokeLinecap: "round", strokeLinejoin: "round", className, children: /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("line", { x1: "5", y1: "12", x2: "19", y2: "12" }) });
 };
 
+// src/Icons/IconMapPin.tsx
+var import_jsx_runtime17 = require("react/jsx-runtime");
+var IconMapPin = ({ className, fill = false, duotone = true }) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("svg", { width: "20", height: "20", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", className, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
+      "path",
+      {
+        opacity: duotone ? "0.5" : "1",
+        d: "M4 10.1433C4 5.64588 7.58172 2 12 2C16.4183 2 20 5.64588 20 10.1433C20 14.6055 17.4467 19.8124 13.4629 21.6744C12.5343 22.1085 11.4657 22.1085 10.5371 21.6744C6.55332 19.8124 4 14.6055 4 10.1433Z",
+        stroke: "currentColor",
+        strokeWidth: "1.5"
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("circle", { cx: "12", cy: "10", r: "3", stroke: "currentColor", strokeWidth: "1.5" })
+  ] });
+};
+
 // src/components/Dropdown.tsx
 var React4 = __toESM(require("react"), 1);
 var DropdownMenuPrimitive = __toESM(require("@radix-ui/react-dropdown-menu"), 1);
 var import_lucide_react2 = require("lucide-react");
-var import_jsx_runtime17 = require("react/jsx-runtime");
+var import_jsx_runtime18 = require("react/jsx-runtime");
 var DropdownMenu = DropdownMenuPrimitive.Root;
 var DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
 var DropdownMenuGroup = DropdownMenuPrimitive.Group;
@@ -610,7 +636,7 @@ var DropdownMenuSub = DropdownMenuPrimitive.Sub;
 var DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup;
 var DropdownMenuSubTrigger = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, inset, children } = _b, props = __objRest(_b, ["className", "inset", "children"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(
     DropdownMenuPrimitive.SubTrigger,
     __spreadProps(__spreadValues({
       ref,
@@ -622,7 +648,7 @@ var DropdownMenuSubTrigger = React4.forwardRef((_a, ref) => {
     }, props), {
       children: [
         children,
-        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(import_lucide_react2.ChevronRight, { className: "ml-auto h-4 w-4" })
+        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(import_lucide_react2.ChevronRight, { className: "ml-auto h-4 w-4" })
       ]
     })
   );
@@ -630,7 +656,7 @@ var DropdownMenuSubTrigger = React4.forwardRef((_a, ref) => {
 DropdownMenuSubTrigger.displayName = DropdownMenuPrimitive.SubTrigger.displayName;
 var DropdownMenuSubContent = React4.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
     DropdownMenuPrimitive.SubContent,
     __spreadValues({
       ref,
@@ -644,7 +670,7 @@ var DropdownMenuSubContent = React4.forwardRef((_a, ref) => {
 DropdownMenuSubContent.displayName = DropdownMenuPrimitive.SubContent.displayName;
 var DropdownMenuContent = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, sideOffset = 4 } = _b, props = __objRest(_b, ["className", "sideOffset"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(DropdownMenuPrimitive.Portal, { children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(DropdownMenuPrimitive.Portal, { children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
     DropdownMenuPrimitive.Content,
     __spreadValues({
       ref,
@@ -659,7 +685,7 @@ var DropdownMenuContent = React4.forwardRef((_a, ref) => {
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 var DropdownMenuItem = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, inset } = _b, props = __objRest(_b, ["className", "inset"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
     DropdownMenuPrimitive.Item,
     __spreadValues({
       ref,
@@ -674,7 +700,7 @@ var DropdownMenuItem = React4.forwardRef((_a, ref) => {
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
 var DropdownMenuCheckboxItem = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, children, checked } = _b, props = __objRest(_b, ["className", "children", "checked"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(
     DropdownMenuPrimitive.CheckboxItem,
     __spreadProps(__spreadValues({
       ref,
@@ -685,7 +711,7 @@ var DropdownMenuCheckboxItem = React4.forwardRef((_a, ref) => {
       checked
     }, props), {
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("span", { className: "absolute left-2 flex h-3.5 w-3.5 items-center justify-center", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(DropdownMenuPrimitive.ItemIndicator, { children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(import_lucide_react2.Check, { className: "h-4 w-4" }) }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("span", { className: "absolute left-2 flex h-3.5 w-3.5 items-center justify-center", children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(DropdownMenuPrimitive.ItemIndicator, { children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(import_lucide_react2.Check, { className: "h-4 w-4" }) }) }),
         children
       ]
     })
@@ -694,7 +720,7 @@ var DropdownMenuCheckboxItem = React4.forwardRef((_a, ref) => {
 DropdownMenuCheckboxItem.displayName = DropdownMenuPrimitive.CheckboxItem.displayName;
 var DropdownMenuRadioItem = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, children } = _b, props = __objRest(_b, ["className", "children"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(
     DropdownMenuPrimitive.RadioItem,
     __spreadProps(__spreadValues({
       ref,
@@ -704,7 +730,7 @@ var DropdownMenuRadioItem = React4.forwardRef((_a, ref) => {
       )
     }, props), {
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("span", { className: "absolute left-2 flex h-3.5 w-3.5 items-center justify-center", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(DropdownMenuPrimitive.ItemIndicator, { children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(import_lucide_react2.Circle, { className: "h-2 w-2 fill-current" }) }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("span", { className: "absolute left-2 flex h-3.5 w-3.5 items-center justify-center", children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(DropdownMenuPrimitive.ItemIndicator, { children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(import_lucide_react2.Circle, { className: "h-2 w-2 fill-current" }) }) }),
         children
       ]
     })
@@ -713,7 +739,7 @@ var DropdownMenuRadioItem = React4.forwardRef((_a, ref) => {
 DropdownMenuRadioItem.displayName = DropdownMenuPrimitive.RadioItem.displayName;
 var DropdownMenuLabel = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, inset } = _b, props = __objRest(_b, ["className", "inset"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
     DropdownMenuPrimitive.Label,
     __spreadValues({
       ref,
@@ -728,7 +754,7 @@ var DropdownMenuLabel = React4.forwardRef((_a, ref) => {
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
 var DropdownMenuSeparator = React4.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
     DropdownMenuPrimitive.Separator,
     __spreadValues({
       ref,
@@ -743,7 +769,7 @@ var DropdownMenuShortcut = (_a) => {
   } = _b, props = __objRest(_b, [
     "className"
   ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
     "span",
     __spreadValues({
       className: cn("ml-auto text-xs tracking-widest opacity-60", className)
@@ -751,6 +777,118 @@ var DropdownMenuShortcut = (_a) => {
   );
 };
 DropdownMenuShortcut.displayName = "DropdownMenuShortcut";
+
+// src/components/NavigationMenu.tsx
+var React5 = __toESM(require("react"), 1);
+var NavigationMenuPrimitive = __toESM(require("@radix-ui/react-navigation-menu"), 1);
+var import_class_variance_authority6 = require("class-variance-authority");
+var import_lucide_react3 = require("lucide-react");
+var import_jsx_runtime19 = require("react/jsx-runtime");
+var NavigationMenu = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className, children } = _b, props = __objRest(_b, ["className", "children"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime19.jsxs)(
+    NavigationMenuPrimitive.Root,
+    __spreadProps(__spreadValues({
+      ref,
+      className: cn(
+        "relative z-10 flex max-w-max flex-1 items-center justify-center",
+        className
+      )
+    }, props), {
+      children: [
+        children,
+        /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(NavigationMenuViewport, {})
+      ]
+    })
+  );
+});
+NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName;
+var NavigationMenuList = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+    NavigationMenuPrimitive.List,
+    __spreadValues({
+      ref,
+      className: cn(
+        "group flex flex-1 list-none items-center justify-center space-x-1",
+        className
+      )
+    }, props)
+  );
+});
+NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
+var NavigationMenuItem = NavigationMenuPrimitive.Item;
+var navigationMenuTriggerStyle = (0, import_class_variance_authority6.cva)(
+  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+);
+var NavigationMenuTrigger = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className, children } = _b, props = __objRest(_b, ["className", "children"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime19.jsxs)(
+    NavigationMenuPrimitive.Trigger,
+    __spreadProps(__spreadValues({
+      ref,
+      className: cn(navigationMenuTriggerStyle(), "group", className)
+    }, props), {
+      children: [
+        children,
+        " ",
+        /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+          import_lucide_react3.ChevronDown,
+          {
+            className: "relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180",
+            "aria-hidden": "true"
+          }
+        )
+      ]
+    })
+  );
+});
+NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName;
+var NavigationMenuContent = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+    NavigationMenuPrimitive.Content,
+    __spreadValues({
+      ref,
+      className: cn(
+        "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto ",
+        className
+      )
+    }, props)
+  );
+});
+NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName;
+var NavigationMenuLink = NavigationMenuPrimitive.Link;
+var NavigationMenuViewport = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)("div", { className: cn("absolute top-full flex justify-center"), children: /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+    NavigationMenuPrimitive.Viewport,
+    __spreadValues({
+      className: cn(
+        "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border border-[#323b45] bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
+        className
+      ),
+      ref
+    }, props)
+  ) });
+});
+NavigationMenuViewport.displayName = NavigationMenuPrimitive.Viewport.displayName;
+var NavigationMenuIndicator = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+    NavigationMenuPrimitive.Indicator,
+    __spreadProps(__spreadValues({
+      ref,
+      className: cn(
+        "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
+        className
+      )
+    }, props), {
+      children: /* @__PURE__ */ (0, import_jsx_runtime19.jsx)("div", { className: "relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md" })
+    })
+  );
+});
+NavigationMenuIndicator.displayName = NavigationMenuPrimitive.Indicator.displayName;
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Accordion,
@@ -778,12 +916,21 @@ DropdownMenuShortcut.displayName = "DropdownMenuShortcut";
   IconDollarSignCircle,
   IconHelpCircle,
   IconLogout,
+  IconMapPin,
   IconMinus,
   IconPlus,
   IconShoppingCart,
   IconUser,
   Input,
   Logo,
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
   Panel,
   Sidebar,
   Text

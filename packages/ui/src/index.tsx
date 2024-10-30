@@ -14,6 +14,7 @@ export { IconUser } from './Icons/IconUser'
 export { IconLogout } from './Icons/IconLogout'
 export { IconPlus } from './Icons/IconPlus'
 export { IconMinus } from './Icons/IconMinus'
+export { IconMapPin } from './Icons/IconMapPin'
 
 
 export {
@@ -34,5 +35,16 @@ export {
   DropdownMenuRadioGroup,
 }
   from './components/Dropdown'
+
+export {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from './components/NavigationMenu'
 
 import './css/index.css'

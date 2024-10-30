@@ -531,11 +531,28 @@ var IconMinus = ({ className, fill = false, duotone = true }) => {
   return /* @__PURE__ */ jsx16("svg", { width: "16", height: "20", viewBox: "0 0 24 24", stroke: "currentColor", strokeWidth: "1.5", fill: "none", strokeLinecap: "round", strokeLinejoin: "round", className, children: /* @__PURE__ */ jsx16("line", { x1: "5", y1: "12", x2: "19", y2: "12" }) });
 };
 
+// src/Icons/IconMapPin.tsx
+import { jsx as jsx17, jsxs as jsxs8 } from "react/jsx-runtime";
+var IconMapPin = ({ className, fill = false, duotone = true }) => {
+  return /* @__PURE__ */ jsxs8("svg", { width: "20", height: "20", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", className, children: [
+    /* @__PURE__ */ jsx17(
+      "path",
+      {
+        opacity: duotone ? "0.5" : "1",
+        d: "M4 10.1433C4 5.64588 7.58172 2 12 2C16.4183 2 20 5.64588 20 10.1433C20 14.6055 17.4467 19.8124 13.4629 21.6744C12.5343 22.1085 11.4657 22.1085 10.5371 21.6744C6.55332 19.8124 4 14.6055 4 10.1433Z",
+        stroke: "currentColor",
+        strokeWidth: "1.5"
+      }
+    ),
+    /* @__PURE__ */ jsx17("circle", { cx: "12", cy: "10", r: "3", stroke: "currentColor", strokeWidth: "1.5" })
+  ] });
+};
+
 // src/components/Dropdown.tsx
 import * as React4 from "react";
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import { Check, ChevronRight, Circle } from "lucide-react";
-import { jsx as jsx17, jsxs as jsxs8 } from "react/jsx-runtime";
+import { jsx as jsx18, jsxs as jsxs9 } from "react/jsx-runtime";
 var DropdownMenu = DropdownMenuPrimitive.Root;
 var DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
 var DropdownMenuGroup = DropdownMenuPrimitive.Group;
@@ -544,7 +561,7 @@ var DropdownMenuSub = DropdownMenuPrimitive.Sub;
 var DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup;
 var DropdownMenuSubTrigger = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, inset, children } = _b, props = __objRest(_b, ["className", "inset", "children"]);
-  return /* @__PURE__ */ jsxs8(
+  return /* @__PURE__ */ jsxs9(
     DropdownMenuPrimitive.SubTrigger,
     __spreadProps(__spreadValues({
       ref,
@@ -556,7 +573,7 @@ var DropdownMenuSubTrigger = React4.forwardRef((_a, ref) => {
     }, props), {
       children: [
         children,
-        /* @__PURE__ */ jsx17(ChevronRight, { className: "ml-auto h-4 w-4" })
+        /* @__PURE__ */ jsx18(ChevronRight, { className: "ml-auto h-4 w-4" })
       ]
     })
   );
@@ -564,7 +581,7 @@ var DropdownMenuSubTrigger = React4.forwardRef((_a, ref) => {
 DropdownMenuSubTrigger.displayName = DropdownMenuPrimitive.SubTrigger.displayName;
 var DropdownMenuSubContent = React4.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
-  return /* @__PURE__ */ jsx17(
+  return /* @__PURE__ */ jsx18(
     DropdownMenuPrimitive.SubContent,
     __spreadValues({
       ref,
@@ -578,7 +595,7 @@ var DropdownMenuSubContent = React4.forwardRef((_a, ref) => {
 DropdownMenuSubContent.displayName = DropdownMenuPrimitive.SubContent.displayName;
 var DropdownMenuContent = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, sideOffset = 4 } = _b, props = __objRest(_b, ["className", "sideOffset"]);
-  return /* @__PURE__ */ jsx17(DropdownMenuPrimitive.Portal, { children: /* @__PURE__ */ jsx17(
+  return /* @__PURE__ */ jsx18(DropdownMenuPrimitive.Portal, { children: /* @__PURE__ */ jsx18(
     DropdownMenuPrimitive.Content,
     __spreadValues({
       ref,
@@ -593,7 +610,7 @@ var DropdownMenuContent = React4.forwardRef((_a, ref) => {
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 var DropdownMenuItem = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, inset } = _b, props = __objRest(_b, ["className", "inset"]);
-  return /* @__PURE__ */ jsx17(
+  return /* @__PURE__ */ jsx18(
     DropdownMenuPrimitive.Item,
     __spreadValues({
       ref,
@@ -608,7 +625,7 @@ var DropdownMenuItem = React4.forwardRef((_a, ref) => {
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
 var DropdownMenuCheckboxItem = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, children, checked } = _b, props = __objRest(_b, ["className", "children", "checked"]);
-  return /* @__PURE__ */ jsxs8(
+  return /* @__PURE__ */ jsxs9(
     DropdownMenuPrimitive.CheckboxItem,
     __spreadProps(__spreadValues({
       ref,
@@ -619,7 +636,7 @@ var DropdownMenuCheckboxItem = React4.forwardRef((_a, ref) => {
       checked
     }, props), {
       children: [
-        /* @__PURE__ */ jsx17("span", { className: "absolute left-2 flex h-3.5 w-3.5 items-center justify-center", children: /* @__PURE__ */ jsx17(DropdownMenuPrimitive.ItemIndicator, { children: /* @__PURE__ */ jsx17(Check, { className: "h-4 w-4" }) }) }),
+        /* @__PURE__ */ jsx18("span", { className: "absolute left-2 flex h-3.5 w-3.5 items-center justify-center", children: /* @__PURE__ */ jsx18(DropdownMenuPrimitive.ItemIndicator, { children: /* @__PURE__ */ jsx18(Check, { className: "h-4 w-4" }) }) }),
         children
       ]
     })
@@ -628,7 +645,7 @@ var DropdownMenuCheckboxItem = React4.forwardRef((_a, ref) => {
 DropdownMenuCheckboxItem.displayName = DropdownMenuPrimitive.CheckboxItem.displayName;
 var DropdownMenuRadioItem = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, children } = _b, props = __objRest(_b, ["className", "children"]);
-  return /* @__PURE__ */ jsxs8(
+  return /* @__PURE__ */ jsxs9(
     DropdownMenuPrimitive.RadioItem,
     __spreadProps(__spreadValues({
       ref,
@@ -638,7 +655,7 @@ var DropdownMenuRadioItem = React4.forwardRef((_a, ref) => {
       )
     }, props), {
       children: [
-        /* @__PURE__ */ jsx17("span", { className: "absolute left-2 flex h-3.5 w-3.5 items-center justify-center", children: /* @__PURE__ */ jsx17(DropdownMenuPrimitive.ItemIndicator, { children: /* @__PURE__ */ jsx17(Circle, { className: "h-2 w-2 fill-current" }) }) }),
+        /* @__PURE__ */ jsx18("span", { className: "absolute left-2 flex h-3.5 w-3.5 items-center justify-center", children: /* @__PURE__ */ jsx18(DropdownMenuPrimitive.ItemIndicator, { children: /* @__PURE__ */ jsx18(Circle, { className: "h-2 w-2 fill-current" }) }) }),
         children
       ]
     })
@@ -647,7 +664,7 @@ var DropdownMenuRadioItem = React4.forwardRef((_a, ref) => {
 DropdownMenuRadioItem.displayName = DropdownMenuPrimitive.RadioItem.displayName;
 var DropdownMenuLabel = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, inset } = _b, props = __objRest(_b, ["className", "inset"]);
-  return /* @__PURE__ */ jsx17(
+  return /* @__PURE__ */ jsx18(
     DropdownMenuPrimitive.Label,
     __spreadValues({
       ref,
@@ -662,7 +679,7 @@ var DropdownMenuLabel = React4.forwardRef((_a, ref) => {
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
 var DropdownMenuSeparator = React4.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
-  return /* @__PURE__ */ jsx17(
+  return /* @__PURE__ */ jsx18(
     DropdownMenuPrimitive.Separator,
     __spreadValues({
       ref,
@@ -677,7 +694,7 @@ var DropdownMenuShortcut = (_a) => {
   } = _b, props = __objRest(_b, [
     "className"
   ]);
-  return /* @__PURE__ */ jsx17(
+  return /* @__PURE__ */ jsx18(
     "span",
     __spreadValues({
       className: cn("ml-auto text-xs tracking-widest opacity-60", className)
@@ -685,6 +702,118 @@ var DropdownMenuShortcut = (_a) => {
   );
 };
 DropdownMenuShortcut.displayName = "DropdownMenuShortcut";
+
+// src/components/NavigationMenu.tsx
+import * as React5 from "react";
+import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
+import { cva as cva6 } from "class-variance-authority";
+import { ChevronDown as ChevronDown2 } from "lucide-react";
+import { jsx as jsx19, jsxs as jsxs10 } from "react/jsx-runtime";
+var NavigationMenu = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className, children } = _b, props = __objRest(_b, ["className", "children"]);
+  return /* @__PURE__ */ jsxs10(
+    NavigationMenuPrimitive.Root,
+    __spreadProps(__spreadValues({
+      ref,
+      className: cn(
+        "relative z-10 flex max-w-max flex-1 items-center justify-center",
+        className
+      )
+    }, props), {
+      children: [
+        children,
+        /* @__PURE__ */ jsx19(NavigationMenuViewport, {})
+      ]
+    })
+  );
+});
+NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName;
+var NavigationMenuList = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
+  return /* @__PURE__ */ jsx19(
+    NavigationMenuPrimitive.List,
+    __spreadValues({
+      ref,
+      className: cn(
+        "group flex flex-1 list-none items-center justify-center space-x-1",
+        className
+      )
+    }, props)
+  );
+});
+NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
+var NavigationMenuItem = NavigationMenuPrimitive.Item;
+var navigationMenuTriggerStyle = cva6(
+  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+);
+var NavigationMenuTrigger = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className, children } = _b, props = __objRest(_b, ["className", "children"]);
+  return /* @__PURE__ */ jsxs10(
+    NavigationMenuPrimitive.Trigger,
+    __spreadProps(__spreadValues({
+      ref,
+      className: cn(navigationMenuTriggerStyle(), "group", className)
+    }, props), {
+      children: [
+        children,
+        " ",
+        /* @__PURE__ */ jsx19(
+          ChevronDown2,
+          {
+            className: "relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180",
+            "aria-hidden": "true"
+          }
+        )
+      ]
+    })
+  );
+});
+NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName;
+var NavigationMenuContent = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
+  return /* @__PURE__ */ jsx19(
+    NavigationMenuPrimitive.Content,
+    __spreadValues({
+      ref,
+      className: cn(
+        "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto ",
+        className
+      )
+    }, props)
+  );
+});
+NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName;
+var NavigationMenuLink = NavigationMenuPrimitive.Link;
+var NavigationMenuViewport = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
+  return /* @__PURE__ */ jsx19("div", { className: cn("absolute top-full flex justify-center"), children: /* @__PURE__ */ jsx19(
+    NavigationMenuPrimitive.Viewport,
+    __spreadValues({
+      className: cn(
+        "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border border-[#323b45] bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
+        className
+      ),
+      ref
+    }, props)
+  ) });
+});
+NavigationMenuViewport.displayName = NavigationMenuPrimitive.Viewport.displayName;
+var NavigationMenuIndicator = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
+  return /* @__PURE__ */ jsx19(
+    NavigationMenuPrimitive.Indicator,
+    __spreadProps(__spreadValues({
+      ref,
+      className: cn(
+        "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
+        className
+      )
+    }, props), {
+      children: /* @__PURE__ */ jsx19("div", { className: "relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md" })
+    })
+  );
+});
+NavigationMenuIndicator.displayName = NavigationMenuPrimitive.Indicator.displayName;
 export {
   Accordion,
   AccordionContent,
@@ -711,12 +840,21 @@ export {
   IconDollarSignCircle,
   IconHelpCircle,
   IconLogout,
+  IconMapPin,
   IconMinus,
   IconPlus,
   IconShoppingCart,
   IconUser,
   Input,
   Logo,
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
   Panel,
   Sidebar,
   Text
