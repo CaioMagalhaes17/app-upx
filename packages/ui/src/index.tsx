@@ -47,4 +47,12 @@ export {
   NavigationMenuViewport,
 } from './components/NavigationMenu'
 
+export {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/Carousel'
+
 import './css/index.css'
