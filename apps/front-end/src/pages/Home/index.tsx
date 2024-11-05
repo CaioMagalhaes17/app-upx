@@ -1,12 +1,10 @@
-import { EventsOpenToPublic } from "./components/EventsOpenToPublic";
-import { KnowledgeCategories } from "./components/KnowledgeCategories";
+import { HomeController } from "./HomeController";
 
-export default function Home() {
-
+export function Home() {
+  const { getProfileHome } = HomeController()
   return (
-    <div className="w-full flex flex-col items-center px-20">
-      <KnowledgeCategories />
-      <EventsOpenToPublic />
-    </div>
+    <>
+      {getProfileHome()}
+    </>
   )
 }

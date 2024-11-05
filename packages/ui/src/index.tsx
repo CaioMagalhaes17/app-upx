@@ -15,7 +15,7 @@ export { IconLogout } from './Icons/IconLogout'
 export { IconPlus } from './Icons/IconPlus'
 export { IconMinus } from './Icons/IconMinus'
 export { IconMapPin } from './Icons/IconMapPin'
-
+export { Footer } from './components/Footer'
 
 export {
   DropdownMenu,

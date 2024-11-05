@@ -1,12 +1,12 @@
 import { Header as UIHeader } from "@kosky/ui";
-import { LoginButtons } from "./LoginButtons";
-import { Location } from "./Location";
-import { HeaderLogo } from "./Logo";
-import { HeaderSearchBar } from "./SearchBar";
-import { AutenticatedHeaderMenus } from "./AutenticatedHeaderMenus";
+import { LoginButtons } from "./components/LoginButtons";
+import { Location } from "./components/Location";
+import { HeaderLogo } from "./components/Logo";
+import { HeaderSearchBar } from "./components/SearchBar";
+import { AutenticatedHeaderMenus } from "./components/AutenticatedHeaderMenus";
 
 export function Header() {
-  const autenticated = true
+  const autenticated = false
   return (
     <>
       <UIHeader className="h-[80px] w-full bg-black border-b border-b-[#323b45]">

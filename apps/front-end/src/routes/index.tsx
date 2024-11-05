@@ -1,5 +1,6 @@
 import DefaultLayout from "@/components/DefaultLayout";
-import Home from "@/pages/Home";
+import { EventDetails } from "@/pages/Events/Details";
+import { Home } from "@/pages/Home";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 
 const routes: RouteObject[] = [
@@ -9,6 +10,10 @@ const routes: RouteObject[] = [
       {
         path: '/',
         element: <Home />
+      },
+      {
+        path: '/event/details',
+        element: <EventDetails />
       }
     ]
   }

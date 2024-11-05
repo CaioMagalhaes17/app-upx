@@ -2,6 +2,7 @@ import { Box } from "@kosky/ui"
 import { Suspense } from "react"
 import { Outlet } from "react-router-dom"
 import { Header } from "./Header"
+import { Footer } from "./Footer"
 
 export default function DefaultLayout() {
   return (
@@ -12,8 +13,9 @@ export default function DefaultLayout() {
             <Box className="main-content flex flex-col min-h-screen">
               <Header />
               <Suspense>
-                <Box data-overlap="false" className="animate__fadeIn p-10 animate__animated page-container scrollable">
+                <Box data-overlap="false" className="animate__fadeIn animate__animated page-container scrollable">
                   <Outlet />
+                  <Footer />
                 </Box>
               </Suspense>
             </Box>
