@@ -21,12 +21,12 @@ export function KnowledgeCategories() {
   ]
   return (
     <div className="mb-10">
-      <Text as="h1" className="text-3xl w-full mt-10 mb-5">Categorias de Conhecimento</Text>
-      <Panel className="w-full  mr-auto ml-auto h-[31.25rem]">
-        <div className="h-full border border-[#323b45] flex gap-10 items-center">
+      <Text as="h1" className="text-3xl w-full mt-10 mb-5 text-white">Categorias de Conhecimento</Text>
+      <Panel className="w-full mr-auto ml-auto h-[20.25rem]">
+        <div className="h-full flex gap-10 items-center">
           {areas.map((item) => {
             return (
-              <div className="w-[25%] border border-[#323b45]">
+              <div className="w-[25%]">
                 <div className="rounded-md mb-5">
                   <img src={item.img} />
                 </div>

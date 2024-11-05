@@ -1,7 +1,7 @@
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, Panel } from "@kosky/ui";
 import { User } from "./User";
 
-export function AutenticatedHeaderMenus() {
+export function UserHeaderMenus() {
   return (
     <>
       <div className="mr-auto" />
@@ -25,6 +25,8 @@ export function AutenticatedHeaderMenus() {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+      <div className="w-[1px] h-[50px] bg-gray mr-10">
+      </div>
       <User />
     </>
   )
