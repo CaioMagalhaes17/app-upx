@@ -15,7 +15,7 @@ export function Header() {
             <HeaderSearchBar />
             <Location />
           </div>
-          <div className="flex items-center flex-row px-5 py-2.5 ">
+          <div style={{ paddingRight: '1.25rem' }} className="flex items-center flex-row">
             {getHeaderMenus()}
           </div>
         </div>
