@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@kosky/ui": "workspace:*",
     "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-navigation-menu": "^1.2.1",
@@ -29,10 +30,11 @@
     "react-router-dom": "^6.27.0",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
-    "@kosky/ui": "workspace:*"
+    "zustand": "^5.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "@kosky/tailwind-config": "workspace:*",
     "@types/node": "^22.8.1",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
@@ -46,7 +48,6 @@
     "tailwindcss": "^3.4.14",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.10.0",
-    "vite": "^5.4.9",
-    "@kosky/tailwind-config": "workspace:*"
+    "vite": "^5.4.9"
   }
 }

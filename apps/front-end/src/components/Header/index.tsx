@@ -1,12 +1,11 @@
 import { Header as UIHeader } from "@kosky/ui";
-import { LoginButtons } from "./components/LoginButtons";
 import { Location } from "./components/Location";
 import { HeaderLogo } from "./components/Logo";
 import { HeaderSearchBar } from "./components/SearchBar";
 import { HeaderController } from "./HeaderController";
 
 export function Header() {
-  const { getHeaderMenus, isAutenticated } = HeaderController()
+  const { getHeaderMenus } = HeaderController()
   return (
     <>
       <UIHeader className="h-[80px] w-full bg-black border-b border-b-gray">
@@ -17,7 +16,7 @@ export function Header() {
             <Location />
           </div>
           <div className="flex items-center flex-row px-5 py-2.5 ">
-            {isAutenticated() ? getHeaderMenus() : <LoginButtons />}
+            {getHeaderMenus()}
           </div>
         </div>
       </UIHeader>

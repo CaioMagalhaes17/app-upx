@@ -87,6 +87,7 @@ __export(src_exports, {
   DropdownMenuTrigger: () => DropdownMenuTrigger,
   Footer: () => Footer,
   Header: () => Header,
+  IconBell: () => IconBell,
   IconDollarSignCircle: () => IconDollarSignCircle,
   IconHelpCircle: () => IconHelpCircle,
   IconLogout: () => IconLogout,
@@ -639,11 +640,53 @@ function Footer({ className, children, style }) {
   return /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(import_jsx_runtime18.Fragment, { children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("footer", { className: cn(FooterStyle({ className })), style, children }) });
 }
 
+// src/Icons/IconBell.tsx
+var import_jsx_runtime19 = require("react/jsx-runtime");
+var IconBell = ({ className, fill = false, duotone = true }) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(import_jsx_runtime19.Fragment, { children: !fill ? /* @__PURE__ */ (0, import_jsx_runtime19.jsxs)("svg", { width: "14", height: "14", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", className, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+      "path",
+      {
+        d: "M19.0001 9.7041V9C19.0001 5.13401 15.8661 2 12.0001 2C8.13407 2 5.00006 5.13401 5.00006 9V9.7041C5.00006 10.5491 4.74995 11.3752 4.28123 12.0783L3.13263 13.8012C2.08349 15.3749 2.88442 17.5139 4.70913 18.0116C9.48258 19.3134 14.5175 19.3134 19.291 18.0116C21.1157 17.5139 21.9166 15.3749 20.8675 13.8012L19.7189 12.0783C19.2502 11.3752 19.0001 10.5491 19.0001 9.7041Z",
+        stroke: "currentColor",
+        strokeWidth: "1.5"
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+      "path",
+      {
+        opacity: duotone ? "0.5" : "1",
+        d: "M7.5 19C8.15503 20.7478 9.92246 22 12 22C14.0775 22 15.845 20.7478 16.5 19",
+        stroke: "currentColor",
+        strokeWidth: "1.5",
+        strokeLinecap: "round"
+      }
+    )
+  ] }) : /* @__PURE__ */ (0, import_jsx_runtime19.jsxs)("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", className, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+      "path",
+      {
+        opacity: duotone ? "0.5" : "1",
+        d: "M18.7491 9V9.7041C18.7491 10.5491 18.9903 11.3752 19.4422 12.0782L20.5496 13.8012C21.5612 15.3749 20.789 17.5139 19.0296 18.0116C14.4273 19.3134 9.57274 19.3134 4.97036 18.0116C3.21105 17.5139 2.43882 15.3749 3.45036 13.8012L4.5578 12.0782C5.00972 11.3752 5.25087 10.5491 5.25087 9.7041V9C5.25087 5.13401 8.27256 2 12 2C15.7274 2 18.7491 5.13401 18.7491 9Z",
+        fill: "currentColor"
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+      "path",
+      {
+        d: "M7.24316 18.5454C7.8941 20.5506 9.77767 22.0002 11.9998 22.0002C14.222 22.0002 16.1055 20.5506 16.7565 18.5454C13.611 19.1357 10.3886 19.1357 7.24316 18.5454Z",
+        fill: "currentColor",
+        stroke: !duotone ? "white" : "currentColor"
+      }
+    )
+  ] }) });
+};
+
 // src/components/Dropdown.tsx
 var React4 = __toESM(require("react"), 1);
 var DropdownMenuPrimitive = __toESM(require("@radix-ui/react-dropdown-menu"), 1);
 var import_lucide_react2 = require("lucide-react");
-var import_jsx_runtime19 = require("react/jsx-runtime");
+var import_jsx_runtime20 = require("react/jsx-runtime");
 var DropdownMenu = DropdownMenuPrimitive.Root;
 var DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
 var DropdownMenuGroup = DropdownMenuPrimitive.Group;
@@ -652,7 +695,7 @@ var DropdownMenuSub = DropdownMenuPrimitive.Sub;
 var DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup;
 var DropdownMenuSubTrigger = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, inset, children } = _b, props = __objRest(_b, ["className", "inset", "children"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime19.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)(
     DropdownMenuPrimitive.SubTrigger,
     __spreadProps(__spreadValues({
       ref,
@@ -664,7 +707,7 @@ var DropdownMenuSubTrigger = React4.forwardRef((_a, ref) => {
     }, props), {
       children: [
         children,
-        /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(import_lucide_react2.ChevronRight, { className: "ml-auto h-4 w-4" })
+        /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(import_lucide_react2.ChevronRight, { className: "ml-auto h-4 w-4" })
       ]
     })
   );
@@ -672,7 +715,7 @@ var DropdownMenuSubTrigger = React4.forwardRef((_a, ref) => {
 DropdownMenuSubTrigger.displayName = DropdownMenuPrimitive.SubTrigger.displayName;
 var DropdownMenuSubContent = React4.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
     DropdownMenuPrimitive.SubContent,
     __spreadValues({
       ref,
@@ -686,7 +729,7 @@ var DropdownMenuSubContent = React4.forwardRef((_a, ref) => {
 DropdownMenuSubContent.displayName = DropdownMenuPrimitive.SubContent.displayName;
 var DropdownMenuContent = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, sideOffset = 4 } = _b, props = __objRest(_b, ["className", "sideOffset"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(DropdownMenuPrimitive.Portal, { children: /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(DropdownMenuPrimitive.Portal, { children: /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
     DropdownMenuPrimitive.Content,
     __spreadValues({
       ref,
@@ -701,7 +744,7 @@ var DropdownMenuContent = React4.forwardRef((_a, ref) => {
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 var DropdownMenuItem = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, inset } = _b, props = __objRest(_b, ["className", "inset"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
     DropdownMenuPrimitive.Item,
     __spreadValues({
       ref,
@@ -716,7 +759,7 @@ var DropdownMenuItem = React4.forwardRef((_a, ref) => {
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
 var DropdownMenuCheckboxItem = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, children, checked } = _b, props = __objRest(_b, ["className", "children", "checked"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime19.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)(
     DropdownMenuPrimitive.CheckboxItem,
     __spreadProps(__spreadValues({
       ref,
@@ -727,7 +770,7 @@ var DropdownMenuCheckboxItem = React4.forwardRef((_a, ref) => {
       checked
     }, props), {
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime19.jsx)("span", { className: "absolute left-2 flex h-3.5 w-3.5 items-center justify-center", children: /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(DropdownMenuPrimitive.ItemIndicator, { children: /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(import_lucide_react2.Check, { className: "h-4 w-4" }) }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("span", { className: "absolute left-2 flex h-3.5 w-3.5 items-center justify-center", children: /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(DropdownMenuPrimitive.ItemIndicator, { children: /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(import_lucide_react2.Check, { className: "h-4 w-4" }) }) }),
         children
       ]
     })
@@ -736,7 +779,7 @@ var DropdownMenuCheckboxItem = React4.forwardRef((_a, ref) => {
 DropdownMenuCheckboxItem.displayName = DropdownMenuPrimitive.CheckboxItem.displayName;
 var DropdownMenuRadioItem = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, children } = _b, props = __objRest(_b, ["className", "children"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime19.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)(
     DropdownMenuPrimitive.RadioItem,
     __spreadProps(__spreadValues({
       ref,
@@ -746,7 +789,7 @@ var DropdownMenuRadioItem = React4.forwardRef((_a, ref) => {
       )
     }, props), {
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime19.jsx)("span", { className: "absolute left-2 flex h-3.5 w-3.5 items-center justify-center", children: /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(DropdownMenuPrimitive.ItemIndicator, { children: /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(import_lucide_react2.Circle, { className: "h-2 w-2 fill-current" }) }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("span", { className: "absolute left-2 flex h-3.5 w-3.5 items-center justify-center", children: /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(DropdownMenuPrimitive.ItemIndicator, { children: /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(import_lucide_react2.Circle, { className: "h-2 w-2 fill-current" }) }) }),
         children
       ]
     })
@@ -755,7 +798,7 @@ var DropdownMenuRadioItem = React4.forwardRef((_a, ref) => {
 DropdownMenuRadioItem.displayName = DropdownMenuPrimitive.RadioItem.displayName;
 var DropdownMenuLabel = React4.forwardRef((_a, ref) => {
   var _b = _a, { className, inset } = _b, props = __objRest(_b, ["className", "inset"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
     DropdownMenuPrimitive.Label,
     __spreadValues({
       ref,
@@ -770,7 +813,7 @@ var DropdownMenuLabel = React4.forwardRef((_a, ref) => {
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
 var DropdownMenuSeparator = React4.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
     DropdownMenuPrimitive.Separator,
     __spreadValues({
       ref,
@@ -785,7 +828,7 @@ var DropdownMenuShortcut = (_a) => {
   } = _b, props = __objRest(_b, [
     "className"
   ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
     "span",
     __spreadValues({
       className: cn("ml-auto text-xs tracking-widest opacity-60", className)
@@ -799,10 +842,10 @@ var React5 = __toESM(require("react"), 1);
 var NavigationMenuPrimitive = __toESM(require("@radix-ui/react-navigation-menu"), 1);
 var import_class_variance_authority7 = require("class-variance-authority");
 var import_lucide_react3 = require("lucide-react");
-var import_jsx_runtime20 = require("react/jsx-runtime");
+var import_jsx_runtime21 = require("react/jsx-runtime");
 var NavigationMenu = React5.forwardRef((_a, ref) => {
   var _b = _a, { className, children } = _b, props = __objRest(_b, ["className", "children"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)(
     NavigationMenuPrimitive.Root,
     __spreadProps(__spreadValues({
       ref,
@@ -813,7 +856,7 @@ var NavigationMenu = React5.forwardRef((_a, ref) => {
     }, props), {
       children: [
         children,
-        /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(NavigationMenuViewport, {})
+        /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(NavigationMenuViewport, {})
       ]
     })
   );
@@ -821,7 +864,7 @@ var NavigationMenu = React5.forwardRef((_a, ref) => {
 NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName;
 var NavigationMenuList = React5.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(
     NavigationMenuPrimitive.List,
     __spreadValues({
       ref,
@@ -838,8 +881,8 @@ var navigationMenuTriggerStyle = (0, import_class_variance_authority7.cva)(
   "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
 );
 var NavigationMenuTrigger = React5.forwardRef((_a, ref) => {
-  var _b = _a, { className, children } = _b, props = __objRest(_b, ["className", "children"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)(
+  var _b = _a, { className, children, showTrigger = true } = _b, props = __objRest(_b, ["className", "children", "showTrigger"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)(
     NavigationMenuPrimitive.Trigger,
     __spreadProps(__spreadValues({
       ref,
@@ -848,13 +891,13 @@ var NavigationMenuTrigger = React5.forwardRef((_a, ref) => {
       children: [
         children,
         " ",
-        /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
+        showTrigger ? /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(
           import_lucide_react3.ChevronDown,
           {
             className: "relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180",
             "aria-hidden": "true"
           }
-        )
+        ) : ""
       ]
     })
   );
@@ -862,7 +905,7 @@ var NavigationMenuTrigger = React5.forwardRef((_a, ref) => {
 NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName;
 var NavigationMenuContent = React5.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(
     NavigationMenuPrimitive.Content,
     __spreadValues({
       ref,
@@ -877,7 +920,7 @@ NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName;
 var NavigationMenuLink = NavigationMenuPrimitive.Link;
 var NavigationMenuViewport = React5.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("div", { className: cn("absolute top-full flex justify-center"), children: /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("div", { className: cn("absolute top-full flex justify-center"), children: /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(
     NavigationMenuPrimitive.Viewport,
     __spreadValues({
       className: cn(
@@ -891,7 +934,7 @@ var NavigationMenuViewport = React5.forwardRef((_a, ref) => {
 NavigationMenuViewport.displayName = NavigationMenuPrimitive.Viewport.displayName;
 var NavigationMenuIndicator = React5.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(
     NavigationMenuPrimitive.Indicator,
     __spreadProps(__spreadValues({
       ref,
@@ -900,7 +943,7 @@ var NavigationMenuIndicator = React5.forwardRef((_a, ref) => {
         className
       )
     }, props), {
-      children: /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("div", { className: "relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md" })
+      children: /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("div", { className: "relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md" })
     })
   );
 });
@@ -910,7 +953,7 @@ NavigationMenuIndicator.displayName = NavigationMenuPrimitive.Indicator.displayN
 var React6 = __toESM(require("react"), 1);
 var import_embla_carousel_react = __toESM(require("embla-carousel-react"), 1);
 var import_lucide_react4 = require("lucide-react");
-var import_jsx_runtime21 = require("react/jsx-runtime");
+var import_jsx_runtime22 = require("react/jsx-runtime");
 var CarouselContext = React6.createContext(null);
 function useCarousel() {
   const context = React6.useContext(CarouselContext);
@@ -986,7 +1029,7 @@ var Carousel = React6.forwardRef(
         api == null ? void 0 : api.off("select", onSelect);
       };
     }, [api, onSelect]);
-    return /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(
       CarouselContext.Provider,
       {
         value: {
@@ -999,7 +1042,7 @@ var Carousel = React6.forwardRef(
           canScrollPrev,
           canScrollNext
         },
-        children: /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(
+        children: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(
           "div",
           __spreadProps(__spreadValues({
             ref,
@@ -1019,7 +1062,7 @@ Carousel.displayName = "Carousel";
 var CarouselContent = React6.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
   const { carouselRef, orientation } = useCarousel();
-  return /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("div", { ref: carouselRef, className: "overflow-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { ref: carouselRef, className: "overflow-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(
     "div",
     __spreadValues({
       ref,
@@ -1034,7 +1077,7 @@ CarouselContent.displayName = "CarouselContent";
 var CarouselItem = React6.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
   const { orientation } = useCarousel();
-  return /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(
     "div",
     __spreadValues({
       ref,
@@ -1051,7 +1094,7 @@ CarouselItem.displayName = "CarouselItem";
 var CarouselPrevious = React6.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
   const { orientation, scrollPrev, canScrollPrev } = useCarousel();
-  return /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)(
     "button",
     __spreadProps(__spreadValues({
       ref,
@@ -1064,8 +1107,8 @@ var CarouselPrevious = React6.forwardRef((_a, ref) => {
       onClick: scrollPrev
     }, props), {
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(import_lucide_react4.ArrowLeft, { className: "h-4 w-4" }),
-        /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("span", { className: "sr-only", children: "Previous slide" })
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(import_lucide_react4.ArrowLeft, { className: "h-4 w-4" }),
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("span", { className: "sr-only", children: "Previous slide" })
       ]
     })
   );
@@ -1074,7 +1117,7 @@ CarouselPrevious.displayName = "CarouselPrevious";
 var CarouselNext = React6.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
   const { orientation, scrollNext, canScrollNext } = useCarousel();
-  return /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)(
     "button",
     __spreadProps(__spreadValues({
       ref,
@@ -1087,8 +1130,8 @@ var CarouselNext = React6.forwardRef((_a, ref) => {
       onClick: scrollNext
     }, props), {
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(import_lucide_react4.ArrowRight, { className: "h-4 w-4" }),
-        /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("span", { className: "sr-only", children: "Next slide" })
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(import_lucide_react4.ArrowRight, { className: "h-4 w-4" }),
+        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("span", { className: "sr-only", children: "Next slide" })
       ]
     })
   );
@@ -1124,6 +1167,7 @@ CarouselNext.displayName = "CarouselNext";
   DropdownMenuTrigger,
   Footer,
   Header,
+  IconBell,
   IconDollarSignCircle,
   IconHelpCircle,
   IconLogout,

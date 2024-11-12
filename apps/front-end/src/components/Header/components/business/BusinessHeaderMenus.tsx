@@ -1,5 +1,5 @@
 import { Button, NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, Panel } from "@kosky/ui";
-import { User } from "./User";
+import { User } from "../User";
 
 export function BusinessHeaderMenus() {
   return (

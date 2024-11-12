@@ -1,5 +1,5 @@
 import DefaultLayout from "@/components/DefaultLayout";
-import { EventDetails } from "@/pages/Events/Details";
+import { EventDetails } from "@/pages/Periods/Details";
 import { Home } from "@/pages/Home";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 

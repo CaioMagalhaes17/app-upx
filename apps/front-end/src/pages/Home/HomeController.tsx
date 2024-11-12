@@ -4,9 +4,9 @@ import UserHome from "./User";
 
 export function HomeController() {
   function getProfileHome() {
-    // return <SpecialistHome />
-    // return <BusinessHome />
-    return <UserHome />
+    //return <SpecialistHome />
+    // // return <BusinessHome />
+    // return <UserHome />
   }
 
   return { getProfileHome }

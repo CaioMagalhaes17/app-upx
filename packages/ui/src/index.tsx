@@ -16,6 +16,7 @@ export { IconPlus } from './Icons/IconPlus'
 export { IconMinus } from './Icons/IconMinus'
 export { IconMapPin } from './Icons/IconMapPin'
 export { Footer } from './components/Footer'
+export { IconBell } from './Icons/IconBell'
 
 export {
   DropdownMenu,

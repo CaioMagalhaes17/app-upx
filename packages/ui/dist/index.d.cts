@@ -114,6 +114,13 @@ declare const FooterStyle: (props?: class_variance_authority_types.ClassProp | u
 type FooterProps = ComponentProps<"footer"> & VariantProps<typeof FooterStyle>;
 declare function Footer({ className, children, style }: FooterProps): react_jsx_runtime.JSX.Element;
 
+interface IconBellProps {
+    className?: string;
+    fill?: boolean;
+    duotone?: boolean;
+}
+declare const IconBell: FC<IconBellProps>;
+
 declare const DropdownMenu: React$1.FC<DropdownMenuPrimitive.DropdownMenuProps>;
 declare const DropdownMenuTrigger: React$1.ForwardRefExoticComponent<DropdownMenuPrimitive.DropdownMenuTriggerProps & React$1.RefAttributes<HTMLButtonElement>>;
 declare const DropdownMenuGroup: React$1.ForwardRefExoticComponent<DropdownMenuPrimitive.DropdownMenuGroupProps & React$1.RefAttributes<HTMLDivElement>>;
@@ -142,7 +149,9 @@ declare const DropdownMenuShortcut: {
 declare const NavigationMenu: React$1.ForwardRefExoticComponent<Omit<NavigationMenuPrimitive.NavigationMenuProps & React$1.RefAttributes<HTMLElement>, "ref"> & React$1.RefAttributes<HTMLElement>>;
 declare const NavigationMenuList: React$1.ForwardRefExoticComponent<Omit<NavigationMenuPrimitive.NavigationMenuListProps & React$1.RefAttributes<HTMLUListElement>, "ref"> & React$1.RefAttributes<HTMLUListElement>>;
 declare const NavigationMenuItem: React$1.ForwardRefExoticComponent<NavigationMenuPrimitive.NavigationMenuItemProps & React$1.RefAttributes<HTMLLIElement>>;
-declare const NavigationMenuTrigger: React$1.ForwardRefExoticComponent<Omit<NavigationMenuPrimitive.NavigationMenuTriggerProps & React$1.RefAttributes<HTMLButtonElement>, "ref"> & React$1.RefAttributes<HTMLButtonElement>>;
+declare const NavigationMenuTrigger: React$1.ForwardRefExoticComponent<Omit<NavigationMenuPrimitive.NavigationMenuTriggerProps & React$1.RefAttributes<HTMLButtonElement>, "ref"> & {
+    showTrigger?: Boolean;
+} & React$1.RefAttributes<HTMLButtonElement>>;
 declare const NavigationMenuContent: React$1.ForwardRefExoticComponent<Omit<NavigationMenuPrimitive.NavigationMenuContentProps & React$1.RefAttributes<HTMLDivElement>, "ref"> & React$1.RefAttributes<HTMLDivElement>>;
 declare const NavigationMenuLink: React$1.ForwardRefExoticComponent<NavigationMenuPrimitive.NavigationMenuLinkProps & React$1.RefAttributes<HTMLAnchorElement>>;
 declare const NavigationMenuViewport: React$1.ForwardRefExoticComponent<Omit<NavigationMenuPrimitive.NavigationMenuViewportProps & React$1.RefAttributes<HTMLDivElement>, "ref"> & React$1.RefAttributes<HTMLDivElement>>;
@@ -164,4 +173,4 @@ declare const CarouselItem: React$1.ForwardRefExoticComponent<React$1.HTMLAttrib
 declare const CarouselPrevious: React$1.ForwardRefExoticComponent<Omit<Omit<ButtonProps, "ref"> & React$1.RefAttributes<HTMLButtonElement>, "ref"> & React$1.RefAttributes<HTMLButtonElement>>;
 declare const CarouselNext: React$1.ForwardRefExoticComponent<Omit<Omit<ButtonProps, "ref"> & React$1.RefAttributes<HTMLButtonElement>, "ref"> & React$1.RefAttributes<HTMLButtonElement>>;
 
-export { Accordion, AccordionContent, AccordionItem, AccordionTrigger, Box, Button, Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuPortal, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuSeparator, DropdownMenuShortcut, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuTrigger, Footer, Header, IconDollarSignCircle, IconHelpCircle, IconLogout, IconMapPin, IconMinus, IconPlus, IconShoppingCart, IconUser, Input, Logo, NavigationMenu, NavigationMenuContent, NavigationMenuIndicator, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, NavigationMenuViewport, Panel, Sidebar, Text };
+export { Accordion, AccordionContent, AccordionItem, AccordionTrigger, Box, Button, Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuPortal, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuSeparator, DropdownMenuShortcut, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuTrigger, Footer, Header, IconBell, IconDollarSignCircle, IconHelpCircle, IconLogout, IconMapPin, IconMinus, IconPlus, IconShoppingCart, IconUser, Input, Logo, NavigationMenu, NavigationMenuContent, NavigationMenuIndicator, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, NavigationMenuViewport, Panel, Sidebar, Text };
