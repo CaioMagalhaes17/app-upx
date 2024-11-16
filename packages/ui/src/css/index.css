@@ -95,7 +95,7 @@ body {
   .leftbar {
     @apply bg-black;
     padding: 25px;
-    width: 245px;
+    width: 345px;
     top: 72px;
     position: fixed;
     left: 0;
