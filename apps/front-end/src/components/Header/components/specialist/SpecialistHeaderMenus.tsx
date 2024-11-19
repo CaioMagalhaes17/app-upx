@@ -1,20 +1,20 @@
 import { Button, IconBell, NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, Panel } from "@kosky/ui";
 import { User } from "../User";
+import { useNavigate } from "react-router-dom";
 
 export function SpecialistHeaderMenus() {
+  const navigate = useNavigate()
   return (
     <>
       <div className="mr-auto" />
-      <Button className="btn-primary mr-2 "> Procurar períodos de qualificação</Button>
+      <Button onClick={() => navigate('/periods/list')} className="btn-primary mr-2 "> Procurar períodos de qualificação</Button>
       <NavigationMenu className="mr-2 text-white">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="font-bold">Meu grupo</NavigationMenuTrigger>
             <NavigationMenuContent>
               <Panel className="w-[300px] flex flex-col">
-                <NavigationMenuLink>Períodos ativos</NavigationMenuLink>
-                <NavigationMenuLink>Inscrições de especialistas</NavigationMenuLink>
-                <NavigationMenuLink>Histórico de períodos</NavigationMenuLink>
+                <button className="text-left" onClick={() => navigate('/profile/group')}>Perfil do grupo</button>
               </Panel>
             </NavigationMenuContent>
           </NavigationMenuItem>

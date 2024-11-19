@@ -5,7 +5,7 @@ export function ResultItem({ title, date, location, id, img }: { title: string, 
   const navigation = useNavigate()
   return (
     <>
-      <button onClick={() => navigation(id)} className="flex-[0_0_calc(25%-1.25rem)] h-[250px] px-2 flex flex-col border border-gray">
+      <button onClick={() => navigation('/periods/details')} className="flex-[0_0_calc(25%-1.25rem)] h-[250px] px-2 flex flex-col border border-gray">
         <div className="mb-2">
           <img src={img} />
         </div>
