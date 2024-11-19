@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Text } from "@kosky/ui"
 
-export function DistanceFilter({ distanceValue, onDistanceChange }) {
+export function DistanceFilter({ distanceValue, onDistanceChange }: any) {
   return <>
     <Text as="h1" className="text-lg mb-2 text-white">Limite de distância em Km</Text>
     <div className="flex flex-col">

@@ -5,7 +5,7 @@ export function EventInfos(
   { title, location, date, specialist, status, company, description, politics }
     : { title: string, location: string, date: string, specialist: string, status: string, company: string, description: string, politics: { id: string }[] }
 ) {
-  console.log(location)
+  console.log(politics)
   const navigate = useNavigate()
   return (
     <>

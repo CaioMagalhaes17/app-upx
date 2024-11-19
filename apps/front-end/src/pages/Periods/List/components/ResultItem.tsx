@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 export function ResultItem({ title, date, location, id, img }: { title: string, date: string, location: string, id: string, img: string }) {
   const navigation = useNavigate()
+  console.log(id)
   return (
     <>
       <button onClick={() => navigation('/periods/details')} className="flex-[0_0_calc(25%-1.25rem)] h-[250px] px-2 flex flex-col border border-gray">
