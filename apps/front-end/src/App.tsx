@@ -8,7 +8,7 @@ function App() {
     useStore.setState({
       userInfos: {
         name: 'Caio Magalhães',
-        role: 'company'
+        role: 'specialist'
       }
     })
   };
