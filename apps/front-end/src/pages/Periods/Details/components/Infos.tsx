@@ -28,7 +28,7 @@ export function EventInfos() {
           <Text as="h1" className="mb-2 font-bold text-2xl">Opções de política</Text>
         </div>
         <div className="fixed bottom-4 right-10">
-          <button onClick={() => navigate('/event/signup/')} className="bg-blue-500 font-bold text-lg text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-600">
+          <button onClick={() => navigate('/event/signup')} className="bg-blue-500 font-bold text-lg text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-600">
             Candidatar-se
           </button>
         </div>

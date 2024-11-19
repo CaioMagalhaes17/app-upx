@@ -3,6 +3,7 @@ import { EventDetails } from "@/pages/Periods/Details";
 import { Home } from "@/pages/Home";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import { PeriodsList } from "@/pages/Periods/List";
+import { PeriodSignupForm } from "@/pages/Periods/Signup";
 
 const routes: RouteObject[] = [
   {
@@ -19,6 +20,10 @@ const routes: RouteObject[] = [
       {
         path: '/event/list',
         element: <PeriodsList />
+      },
+      {
+        path: '/event/signup',
+        element: <PeriodSignupForm />
       }
     ]
   }
