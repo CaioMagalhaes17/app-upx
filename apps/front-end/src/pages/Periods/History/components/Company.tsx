@@ -7,7 +7,7 @@ interface IData {
   status: string
 }
 
-export function SpecialistPeriodsHistory() {
+export function CompanyPeriodsHistory() {
   const data: IData[] = [
     {
       id: '1',

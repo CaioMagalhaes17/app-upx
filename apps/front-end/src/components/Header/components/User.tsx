@@ -1,9 +1,11 @@
 import useStore from "@/zustand";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, IconLogout, IconMinus, IconPlus, IconUser, Text } from "@kosky/ui";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, IconLogout, IconUser, Text } from "@kosky/ui";
+import { useNavigate } from "react-router-dom";
 
 export function User() {
   const profileimg = 'https://static-cdn.jtvnw.net/jtv_user_pictures/2e880ff4-7a44-4ec5-9d88-06d3b2286856-profile_image-70x70.png'
   const { userInfos } = useStore()
+  const navigate = useNavigate()
   return (
     <>
       <DropdownMenu>
@@ -13,16 +15,10 @@ export function User() {
         </DropdownMenuTrigger>
         <DropdownMenuContent className="text-white bg-black mt-2">
           <DropdownMenuItem className="">
-            <IconUser className="mr-2" />
-            Minha conta
-          </DropdownMenuItem>
-          <DropdownMenuItem className="text-success">
-            <IconPlus className="mr-2" />
-            Depositar
-          </DropdownMenuItem>
-          <DropdownMenuItem className="text-warning">
-            <IconMinus className="mr-2" />
-            Sacar
+            <button className="flex" onClick={() => navigate('/profile')}>
+              <IconUser className="mr-2" />
+              Meu perfil
+            </button>
           </DropdownMenuItem>
           <DropdownMenuItem className="text-danger">
             <button className="flex">

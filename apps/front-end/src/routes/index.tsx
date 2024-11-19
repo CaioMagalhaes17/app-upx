@@ -5,6 +5,8 @@ import { createBrowserRouter, RouteObject } from "react-router-dom";
 import { PeriodsList } from "@/pages/Periods/List";
 import { PeriodSignupForm } from "@/pages/Periods/Signup";
 import { PeriodsHistory } from "@/pages/Periods/History";
+import { Profile } from "@/pages/Profile";
+import { SpecialistsProfile } from "@/pages/Profile/components/Specialists";
 
 const routes: RouteObject[] = [
   {
@@ -29,7 +31,15 @@ const routes: RouteObject[] = [
       {
         path: '/periods/history',
         element: <PeriodsHistory />
-      }
+      },
+      {
+        path: '/profile',
+        element: <Profile />
+      },
+      {
+        path: '/profile/group',
+        element: <SpecialistsProfile />
+      },
     ]
   }
 ]
