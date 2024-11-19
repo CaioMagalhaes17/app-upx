@@ -755,15 +755,191 @@ var DropdownMenuShortcut = (_a) => {
 };
 DropdownMenuShortcut.displayName = "DropdownMenuShortcut";
 
-// src/components/NavigationMenu.tsx
+// src/components/Table/index.tsx
+import {
+  flexRender,
+  getCoreRowModel,
+  useReactTable
+} from "@tanstack/react-table";
+
+// src/components/Table/shadcn-ui-table/index.tsx
 import * as React5 from "react";
+import { Fragment as Fragment8, jsx as jsx21 } from "react/jsx-runtime";
+var Table = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
+  return /* @__PURE__ */ jsx21("div", { className: "relative w-full overflow-auto", children: /* @__PURE__ */ jsx21(
+    "table",
+    __spreadValues({
+      ref,
+      className: cn("w-full caption-bottom text-sm", className)
+    }, props)
+  ) });
+});
+Table.displayName = "Table";
+var TableHeader = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
+  return /* @__PURE__ */ jsx21("thead", __spreadValues({ ref, className: cn("[&_tr]:border-b", className) }, props));
+});
+TableHeader.displayName = "TableHeader";
+var TableBody = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
+  return /* @__PURE__ */ jsx21(
+    "tbody",
+    __spreadValues({
+      ref,
+      className: cn("[&_tr:last-child]:border-0", className)
+    }, props)
+  );
+});
+TableBody.displayName = "TableBody";
+var TableFooter = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
+  return /* @__PURE__ */ jsx21(
+    "tfoot",
+    __spreadValues({
+      ref,
+      className: cn(
+        "border-t bg-slate-100/50 font-medium [&>tr]:last:border-b-0 dark:bg-slate-800/50",
+        className
+      )
+    }, props)
+  );
+});
+TableFooter.displayName = "TableFooter";
+var TableRow = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
+  return /* @__PURE__ */ jsx21(
+    "tr",
+    __spreadValues({
+      ref,
+      className: cn(
+        "border-b transition-colors hover:bg-slate-100/50 data-[state=selected]:bg-slate-100 dark:hover:bg-slate-800/50 dark:data-[state=selected]:bg-slate-800",
+        className
+      )
+    }, props)
+  );
+});
+TableRow.displayName = "TableRow";
+var TableHead = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
+  return /* @__PURE__ */ jsx21(
+    "th",
+    __spreadValues({
+      ref,
+      className: cn(
+        "text-left",
+        className
+      )
+    }, props)
+  );
+});
+TableHead.displayName = "TableHead";
+var TableCell = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
+  return /* @__PURE__ */ jsx21(
+    "td",
+    __spreadValues({
+      ref,
+      className: cn("p-4 align-middle [&:has([role=checkbox])]:pr-0", className)
+    }, props)
+  );
+});
+TableCell.displayName = "TableCell";
+var TableCaption = React5.forwardRef((_a, ref) => {
+  var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
+  return /* @__PURE__ */ jsx21(
+    "caption",
+    __spreadValues({
+      ref,
+      className: cn("mt-4 text-sm text-slate-500 dark:text-slate-400", className)
+    }, props)
+  );
+});
+TableCaption.displayName = "TableCaption";
+var TablePagination = () => /* @__PURE__ */ jsx21(Fragment8, { children: /* @__PURE__ */ jsx21("div", { className: "flex items-center justify-end space-x-2 py-4" }) });
+
+// src/components/Table/index.tsx
+import { jsx as jsx22, jsxs as jsxs11 } from "react/jsx-runtime";
+function DataTable(_a) {
+  var _b = _a, {
+    data,
+    columns,
+    title,
+    handleOnChangeQuery = () => {
+    },
+    query = "",
+    children,
+    needSearch
+  } = _b, rest = __objRest(_b, [
+    "data",
+    "columns",
+    "title",
+    "handleOnChangeQuery",
+    "query",
+    "children",
+    "needSearch"
+  ]);
+  var _a2;
+  const table = useReactTable(__spreadValues({
+    data,
+    columns,
+    getCoreRowModel: getCoreRowModel()
+  }, rest));
+  return /* @__PURE__ */ jsxs11("div", { className: "w-full", children: [
+    /* @__PURE__ */ jsx22(Text, { as: "h5", className: "flex flex-row gap-5 font-semibold text-lg dark:text-white-light mb-5", children: /* @__PURE__ */ jsx22(Text, { as: "span", children: title }) }),
+    /* @__PURE__ */ jsxs11("div", { className: "flex md:items-center justify-between md:!flex-row flex-col mb-5 gap-5", children: [
+      /* @__PURE__ */ jsx22("div", { className: "flex items-center flex-wrap", children }),
+      needSearch && /* @__PURE__ */ jsx22(
+        Input,
+        {
+          id: "search2",
+          type: "text",
+          className: "!w-auto",
+          placeholder: "Procurar...",
+          value: query,
+          onChange: (event) => handleOnChangeQuery(event.target.value)
+        }
+      )
+    ] }),
+    /* @__PURE__ */ jsx22("div", { className: "rounded-md border", children: /* @__PURE__ */ jsxs11(Table, { children: [
+      /* @__PURE__ */ jsx22(TableHeader, { children: table.getHeaderGroups().map((headerGroup) => /* @__PURE__ */ jsx22(TableRow, { children: headerGroup.headers.map((header) => {
+        return /* @__PURE__ */ jsx22(TableHead, { children: header.isPlaceholder ? null : flexRender(
+          header.column.columnDef.header,
+          header.getContext()
+        ) }, header.id);
+      }) }, headerGroup.id)) }),
+      /* @__PURE__ */ jsx22(TableBody, { children: ((_a2 = table.getRowModel().rows) == null ? void 0 : _a2.length) ? table.getRowModel().rows.map((row) => /* @__PURE__ */ jsx22(
+        TableRow,
+        {
+          "data-state": row.getIsSelected() && "selected",
+          children: row.getVisibleCells().map((cell) => /* @__PURE__ */ jsx22(TableCell, { children: flexRender(
+            cell.column.columnDef.cell,
+            cell.getContext()
+          ) }, cell.id))
+        },
+        row.id
+      )) : /* @__PURE__ */ jsx22(TableRow, { children: /* @__PURE__ */ jsx22(
+        TableCell,
+        {
+          colSpan: columns.length,
+          className: "h-24 text-center",
+          children: "Nenhum resultado encontrado"
+        }
+      ) }) })
+    ] }) }),
+    /* @__PURE__ */ jsx22(TablePagination, {})
+  ] });
+}
+
+// src/components/NavigationMenu.tsx
+import * as React6 from "react";
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import { cva as cva7 } from "class-variance-authority";
 import { ChevronDown as ChevronDown2 } from "lucide-react";
-import { jsx as jsx21, jsxs as jsxs11 } from "react/jsx-runtime";
-var NavigationMenu = React5.forwardRef((_a, ref) => {
+import { jsx as jsx23, jsxs as jsxs12 } from "react/jsx-runtime";
+var NavigationMenu = React6.forwardRef((_a, ref) => {
   var _b = _a, { className, children } = _b, props = __objRest(_b, ["className", "children"]);
-  return /* @__PURE__ */ jsxs11(
+  return /* @__PURE__ */ jsxs12(
     NavigationMenuPrimitive.Root,
     __spreadProps(__spreadValues({
       ref,
@@ -774,15 +950,15 @@ var NavigationMenu = React5.forwardRef((_a, ref) => {
     }, props), {
       children: [
         children,
-        /* @__PURE__ */ jsx21(NavigationMenuViewport, {})
+        /* @__PURE__ */ jsx23(NavigationMenuViewport, {})
       ]
     })
   );
 });
 NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName;
-var NavigationMenuList = React5.forwardRef((_a, ref) => {
+var NavigationMenuList = React6.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
-  return /* @__PURE__ */ jsx21(
+  return /* @__PURE__ */ jsx23(
     NavigationMenuPrimitive.List,
     __spreadValues({
       ref,
@@ -798,9 +974,9 @@ var NavigationMenuItem = NavigationMenuPrimitive.Item;
 var navigationMenuTriggerStyle = cva7(
   "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
 );
-var NavigationMenuTrigger = React5.forwardRef((_a, ref) => {
+var NavigationMenuTrigger = React6.forwardRef((_a, ref) => {
   var _b = _a, { className, children, showTrigger = true } = _b, props = __objRest(_b, ["className", "children", "showTrigger"]);
-  return /* @__PURE__ */ jsxs11(
+  return /* @__PURE__ */ jsxs12(
     NavigationMenuPrimitive.Trigger,
     __spreadProps(__spreadValues({
       ref,
@@ -809,7 +985,7 @@ var NavigationMenuTrigger = React5.forwardRef((_a, ref) => {
       children: [
         children,
         " ",
-        showTrigger ? /* @__PURE__ */ jsx21(
+        showTrigger ? /* @__PURE__ */ jsx23(
           ChevronDown2,
           {
             className: "relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180",
@@ -821,9 +997,9 @@ var NavigationMenuTrigger = React5.forwardRef((_a, ref) => {
   );
 });
 NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName;
-var NavigationMenuContent = React5.forwardRef((_a, ref) => {
+var NavigationMenuContent = React6.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
-  return /* @__PURE__ */ jsx21(
+  return /* @__PURE__ */ jsx23(
     NavigationMenuPrimitive.Content,
     __spreadValues({
       ref,
@@ -836,9 +1012,9 @@ var NavigationMenuContent = React5.forwardRef((_a, ref) => {
 });
 NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName;
 var NavigationMenuLink = NavigationMenuPrimitive.Link;
-var NavigationMenuViewport = React5.forwardRef((_a, ref) => {
+var NavigationMenuViewport = React6.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
-  return /* @__PURE__ */ jsx21("div", { className: cn("absolute top-full flex justify-center"), children: /* @__PURE__ */ jsx21(
+  return /* @__PURE__ */ jsx23("div", { className: cn("absolute top-full flex justify-center"), children: /* @__PURE__ */ jsx23(
     NavigationMenuPrimitive.Viewport,
     __spreadValues({
       className: cn(
@@ -850,9 +1026,9 @@ var NavigationMenuViewport = React5.forwardRef((_a, ref) => {
   ) });
 });
 NavigationMenuViewport.displayName = NavigationMenuPrimitive.Viewport.displayName;
-var NavigationMenuIndicator = React5.forwardRef((_a, ref) => {
+var NavigationMenuIndicator = React6.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
-  return /* @__PURE__ */ jsx21(
+  return /* @__PURE__ */ jsx23(
     NavigationMenuPrimitive.Indicator,
     __spreadProps(__spreadValues({
       ref,
@@ -861,26 +1037,26 @@ var NavigationMenuIndicator = React5.forwardRef((_a, ref) => {
         className
       )
     }, props), {
-      children: /* @__PURE__ */ jsx21("div", { className: "relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md" })
+      children: /* @__PURE__ */ jsx23("div", { className: "relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md" })
     })
   );
 });
 NavigationMenuIndicator.displayName = NavigationMenuPrimitive.Indicator.displayName;
 
 // src/components/Carousel.tsx
-import * as React6 from "react";
+import * as React7 from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { jsx as jsx22, jsxs as jsxs12 } from "react/jsx-runtime";
-var CarouselContext = React6.createContext(null);
+import { jsx as jsx24, jsxs as jsxs13 } from "react/jsx-runtime";
+var CarouselContext = React7.createContext(null);
 function useCarousel() {
-  const context = React6.useContext(CarouselContext);
+  const context = React7.useContext(CarouselContext);
   if (!context) {
     throw new Error("useCarousel must be used within a <Carousel />");
   }
   return context;
 }
-var Carousel = React6.forwardRef(
+var Carousel = React7.forwardRef(
   (_a, ref) => {
     var _b = _a, {
       orientation = "horizontal",
@@ -903,22 +1079,22 @@ var Carousel = React6.forwardRef(
       }),
       plugins
     );
-    const [canScrollPrev, setCanScrollPrev] = React6.useState(false);
-    const [canScrollNext, setCanScrollNext] = React6.useState(false);
-    const onSelect = React6.useCallback((api2) => {
+    const [canScrollPrev, setCanScrollPrev] = React7.useState(false);
+    const [canScrollNext, setCanScrollNext] = React7.useState(false);
+    const onSelect = React7.useCallback((api2) => {
       if (!api2) {
         return;
       }
       setCanScrollPrev(api2.canScrollPrev());
       setCanScrollNext(api2.canScrollNext());
     }, []);
-    const scrollPrev = React6.useCallback(() => {
+    const scrollPrev = React7.useCallback(() => {
       api == null ? void 0 : api.scrollPrev();
     }, [api]);
-    const scrollNext = React6.useCallback(() => {
+    const scrollNext = React7.useCallback(() => {
       api == null ? void 0 : api.scrollNext();
     }, [api]);
-    const handleKeyDown = React6.useCallback(
+    const handleKeyDown = React7.useCallback(
       (event) => {
         if (event.key === "ArrowLeft") {
           event.preventDefault();
@@ -930,13 +1106,13 @@ var Carousel = React6.forwardRef(
       },
       [scrollPrev, scrollNext]
     );
-    React6.useEffect(() => {
+    React7.useEffect(() => {
       if (!api || !setApi) {
         return;
       }
       setApi(api);
     }, [api, setApi]);
-    React6.useEffect(() => {
+    React7.useEffect(() => {
       if (!api) {
         return;
       }
@@ -947,7 +1123,7 @@ var Carousel = React6.forwardRef(
         api == null ? void 0 : api.off("select", onSelect);
       };
     }, [api, onSelect]);
-    return /* @__PURE__ */ jsx22(
+    return /* @__PURE__ */ jsx24(
       CarouselContext.Provider,
       {
         value: {
@@ -960,7 +1136,7 @@ var Carousel = React6.forwardRef(
           canScrollPrev,
           canScrollNext
         },
-        children: /* @__PURE__ */ jsx22(
+        children: /* @__PURE__ */ jsx24(
           "div",
           __spreadProps(__spreadValues({
             ref,
@@ -977,10 +1153,10 @@ var Carousel = React6.forwardRef(
   }
 );
 Carousel.displayName = "Carousel";
-var CarouselContent = React6.forwardRef((_a, ref) => {
+var CarouselContent = React7.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
   const { carouselRef, orientation } = useCarousel();
-  return /* @__PURE__ */ jsx22("div", { ref: carouselRef, className: "overflow-hidden", children: /* @__PURE__ */ jsx22(
+  return /* @__PURE__ */ jsx24("div", { ref: carouselRef, className: "overflow-hidden", children: /* @__PURE__ */ jsx24(
     "div",
     __spreadValues({
       ref,
@@ -992,10 +1168,10 @@ var CarouselContent = React6.forwardRef((_a, ref) => {
   ) });
 });
 CarouselContent.displayName = "CarouselContent";
-var CarouselItem = React6.forwardRef((_a, ref) => {
+var CarouselItem = React7.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
   const { orientation } = useCarousel();
-  return /* @__PURE__ */ jsx22(
+  return /* @__PURE__ */ jsx24(
     "div",
     __spreadValues({
       ref,
@@ -1009,10 +1185,10 @@ var CarouselItem = React6.forwardRef((_a, ref) => {
   );
 });
 CarouselItem.displayName = "CarouselItem";
-var CarouselPrevious = React6.forwardRef((_a, ref) => {
+var CarouselPrevious = React7.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
   const { orientation, scrollPrev, canScrollPrev } = useCarousel();
-  return /* @__PURE__ */ jsxs12(
+  return /* @__PURE__ */ jsxs13(
     "button",
     __spreadProps(__spreadValues({
       ref,
@@ -1025,17 +1201,17 @@ var CarouselPrevious = React6.forwardRef((_a, ref) => {
       onClick: scrollPrev
     }, props), {
       children: [
-        /* @__PURE__ */ jsx22(ArrowLeft, { className: "h-4 w-4" }),
-        /* @__PURE__ */ jsx22("span", { className: "sr-only", children: "Previous slide" })
+        /* @__PURE__ */ jsx24(ArrowLeft, { className: "h-4 w-4" }),
+        /* @__PURE__ */ jsx24("span", { className: "sr-only", children: "Previous slide" })
       ]
     })
   );
 });
 CarouselPrevious.displayName = "CarouselPrevious";
-var CarouselNext = React6.forwardRef((_a, ref) => {
+var CarouselNext = React7.forwardRef((_a, ref) => {
   var _b = _a, { className } = _b, props = __objRest(_b, ["className"]);
   const { orientation, scrollNext, canScrollNext } = useCarousel();
-  return /* @__PURE__ */ jsxs12(
+  return /* @__PURE__ */ jsxs13(
     "button",
     __spreadProps(__spreadValues({
       ref,
@@ -1048,8 +1224,8 @@ var CarouselNext = React6.forwardRef((_a, ref) => {
       onClick: scrollNext
     }, props), {
       children: [
-        /* @__PURE__ */ jsx22(ArrowRight, { className: "h-4 w-4" }),
-        /* @__PURE__ */ jsx22("span", { className: "sr-only", children: "Next slide" })
+        /* @__PURE__ */ jsx24(ArrowRight, { className: "h-4 w-4" }),
+        /* @__PURE__ */ jsx24("span", { className: "sr-only", children: "Next slide" })
       ]
     })
   );
@@ -1067,6 +1243,7 @@ export {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  DataTable,
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,

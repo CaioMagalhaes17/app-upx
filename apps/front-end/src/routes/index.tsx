@@ -4,6 +4,7 @@ import { Home } from "@/pages/Home";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import { PeriodsList } from "@/pages/Periods/List";
 import { PeriodSignupForm } from "@/pages/Periods/Signup";
+import { PeriodsHistory } from "@/pages/Periods/History";
 
 const routes: RouteObject[] = [
   {
@@ -14,16 +15,20 @@ const routes: RouteObject[] = [
         element: <Home />
       },
       {
-        path: '/event/details',
+        path: '/periods/details',
         element: <EventDetails />
       },
       {
-        path: '/event/list',
+        path: '/periods/list',
         element: <PeriodsList />
       },
       {
-        path: '/event/signup',
+        path: '/periods/signup',
         element: <PeriodSignupForm />
+      },
+      {
+        path: '/periods/history',
+        element: <PeriodsHistory />
       }
     ]
   }

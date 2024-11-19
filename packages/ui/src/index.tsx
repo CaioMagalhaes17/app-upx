@@ -38,6 +38,12 @@ export {
   from './components/Dropdown'
 
 export {
+  DataTable
+} from '@/components/Table'
+
+export type { ColumnDef as ColumnType } from '@/components/Table'
+
+export {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuIndicator,

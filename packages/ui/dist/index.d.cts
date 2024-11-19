@@ -5,6 +5,8 @@ import { VariantProps } from 'class-variance-authority';
 import * as react_jsx_runtime from 'react/jsx-runtime';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
+import { ColumnDef, TableOptions } from '@tanstack/react-table';
+export { ColumnDef as ColumnType } from '@tanstack/react-table';
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
 import useEmblaCarousel, { UseEmblaCarouselType } from 'embla-carousel-react';
 
@@ -146,6 +148,18 @@ declare const DropdownMenuShortcut: {
     displayName: string;
 };
 
+interface DataTableProps<TData, TValue> {
+    columns: ColumnDef<TData, TValue>[];
+    data: TData[];
+    title: string;
+    query?: string;
+    handleOnChangeQuery?: (value: string) => void;
+    children?: React.ReactNode;
+    needSearch?: boolean;
+    rest?: TableOptions<TData>;
+}
+declare function DataTable<TData, TValue>({ data, columns, title, handleOnChangeQuery, query, children, needSearch, ...rest }: DataTableProps<TData, TValue>): react_jsx_runtime.JSX.Element;
+
 declare const NavigationMenu: React$1.ForwardRefExoticComponent<Omit<NavigationMenuPrimitive.NavigationMenuProps & React$1.RefAttributes<HTMLElement>, "ref"> & React$1.RefAttributes<HTMLElement>>;
 declare const NavigationMenuList: React$1.ForwardRefExoticComponent<Omit<NavigationMenuPrimitive.NavigationMenuListProps & React$1.RefAttributes<HTMLUListElement>, "ref"> & React$1.RefAttributes<HTMLUListElement>>;
 declare const NavigationMenuItem: React$1.ForwardRefExoticComponent<NavigationMenuPrimitive.NavigationMenuItemProps & React$1.RefAttributes<HTMLLIElement>>;
@@ -173,4 +187,4 @@ declare const CarouselItem: React$1.ForwardRefExoticComponent<React$1.HTMLAttrib
 declare const CarouselPrevious: React$1.ForwardRefExoticComponent<Omit<Omit<ButtonProps, "ref"> & React$1.RefAttributes<HTMLButtonElement>, "ref"> & React$1.RefAttributes<HTMLButtonElement>>;
 declare const CarouselNext: React$1.ForwardRefExoticComponent<Omit<Omit<ButtonProps, "ref"> & React$1.RefAttributes<HTMLButtonElement>, "ref"> & React$1.RefAttributes<HTMLButtonElement>>;
 
-export { Accordion, AccordionContent, AccordionItem, AccordionTrigger, Box, Button, Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuPortal, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuSeparator, DropdownMenuShortcut, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuTrigger, Footer, Header, IconBell, IconDollarSignCircle, IconHelpCircle, IconLogout, IconMapPin, IconMinus, IconPlus, IconShoppingCart, IconUser, Input, Logo, NavigationMenu, NavigationMenuContent, NavigationMenuIndicator, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, NavigationMenuViewport, Panel, Sidebar, Text };
+export { Accordion, AccordionContent, AccordionItem, AccordionTrigger, Box, Button, Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, DataTable, DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuPortal, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuSeparator, DropdownMenuShortcut, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuTrigger, Footer, Header, IconBell, IconDollarSignCircle, IconHelpCircle, IconLogout, IconMapPin, IconMinus, IconPlus, IconShoppingCart, IconUser, Input, Logo, NavigationMenu, NavigationMenuContent, NavigationMenuIndicator, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, NavigationMenuViewport, Panel, Sidebar, Text };
