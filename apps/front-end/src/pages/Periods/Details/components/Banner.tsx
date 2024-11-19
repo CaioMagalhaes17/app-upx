@@ -1,9 +1,9 @@
-export function Banner() {
+export function Banner({ bannerImg }: { bannerImg: string }) {
   return (
     <>
       <div id="baner" style={{
         "backgroundSize": "100%",
-        "backgroundImage": `url(${'https://images.sympla.com.br/66d7a0ac0a850-lg.png'})`,
+        "backgroundImage": `url(${bannerImg})`,
         backgroundPosition: "50% 50%",
         borderBottomWidth: "3px"
       }}

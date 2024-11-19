@@ -1,4 +1,4 @@
-import { Button, Input, Panel, Text } from "@kosky/ui";
+import { Button, Panel, Text } from "@kosky/ui";
 
 export function PeriodSignupForm() {
   return (
